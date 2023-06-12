@@ -1,5 +1,6 @@
 import React from 'react';
-import ImageSlider from './components/ImageSlider'
+import ImageSlider from './components/ImageSlider';
+import Lamp from './components/Lamp';
 
 
 function App() {
@@ -17,8 +18,15 @@ const containerStyles = {
   margin: '0 auto',
 };
 
+const LampHandler = (lampState) => {
+  console.log('lamp click')
+  console.log(!lampState.isOn);
+};
+
 return (
     <div>
+      <Lamp callback={LampHandler}/>
+
       <h1>NEBULAS</h1>
       <div style={containerStyles}>
         <ImageSlider slides={slides}/>
