@@ -1,0 +1,12 @@
+.lamp {
+    margin: 2rem;
+    background-color: grey;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.lampOn {
+    background-color: yellow;
+}
