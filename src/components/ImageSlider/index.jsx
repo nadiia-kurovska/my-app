@@ -23,7 +23,9 @@ function ImageSlider  ({slides})  {
         top: "50%",
         transform: 'translate(0, -50%)',
         left: '32px',
-        fontSize: '45px',
+        height: '20px',
+        width: '20px',
+        borderRadius: '50%',
         color: "#fff",
         zIndex: "1",
         cursor: "pointer",
@@ -34,7 +36,9 @@ function ImageSlider  ({slides})  {
         top: "50%",
         transform: 'translate(0, -50%)',
         right: '32px',
-        fontSize: '45px',
+        height: '20px',
+        width: '20px',
+        borderRadius: '50%',
         color: "#fff",
         zIndex: "1", 
         cursor: "pointer",
@@ -71,14 +75,14 @@ function ImageSlider  ({slides})  {
 
     return (
     <div style={sliderStyles}>
-        <div 
+        <button 
             style={leftArrowStyles}
             onClick={goToPrevious}
-            > back </div>
-        <div 
+            ></button>
+        <button 
             style={rightArrowStyles}
             onClick={goToNext}
-            > next </div>
+            ></button>
         <div style={slideStyles}></div>
         <div style={dotsContainerStyles}>
             {slides.map((slide, slideIndex) => (
@@ -89,6 +93,8 @@ function ImageSlider  ({slides})  {
                     >*</div>
             ))}
         </div>
+        <h2>{slides[currentIndex].title}</h2>
+        <p>{slides[currentIndex].description}</p>
 
     </div>
     )
