@@ -8,19 +8,21 @@ class Lamp extends React.Component {
         this.state = {
             isOn: false,
         };
+
     }
         clickHandler = () => {
             this.props.callback(this.state);
             this.setState({isOn: !this.state.isOn})}
+      
 
     render(){
         const classNames = 'lamp'+ (this.state.isOn? ' lampOn': '');
+        
         return (
-            <div 
-                className={classNames}
-                onClick={this.clickHandler}>
+            <div className={classNames} onClick={this.clickHandler}>
                 {this.state.isOn}
-                </div>
+            </div>
+            
         )
     }
 }

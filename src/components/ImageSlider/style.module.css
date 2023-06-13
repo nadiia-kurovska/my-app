@@ -9,7 +9,7 @@ slideStyles {
     border-radius: 10px;
     background-position: center;
     background-size: cover;
-    background-image: url(${slides[currentIndex].url});
+    /* background-image: url(${slides[currentIndex].url}); */
 }
 
 leftArrowStyles {
@@ -48,3 +48,4 @@ dotStyles {
     cursor: pointer;
     font-size: 20px;
 }
+

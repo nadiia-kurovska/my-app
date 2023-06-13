@@ -1,6 +1,7 @@
 import React from 'react';
 import ImageSlider from './components/ImageSlider';
 import Lamp from './components/Lamp';
+import FlexContainer from './components/FlexContainer';
 
 
 function App() {
@@ -25,7 +26,16 @@ const LampHandler = (lampState) => {
 
 return (
     <div>
-      <Lamp callback={LampHandler}/>
+      <Lamp 
+        callback={LampHandler}
+        comment="it is a comment to lamp"      
+      />
+      <FlexContainer names={slides}>
+        <li></li>
+        <li></li>
+        <li>amracadabra</li>
+      </FlexContainer>
+
 
       <h1>NEBULAS</h1>
       <div style={containerStyles}>
