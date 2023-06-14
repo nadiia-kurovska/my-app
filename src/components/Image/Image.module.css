@@ -1,0 +1,16 @@
+.wrapper {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+  
+  }
+    .wrapper> img {
+      display: block;
+      
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+      object-position: center;
+    }
+  

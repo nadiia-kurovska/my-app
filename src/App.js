@@ -2,7 +2,7 @@ import React from 'react';
 import ImageSlider from './components/ImageSlider';
 import Lamp from './components/Lamp';
 import FlexContainer from './components/FlexContainer';
-
+import Image from './components/Image';
 
 function App() {
   const slides = [
@@ -24,6 +24,10 @@ const LampHandler = (lampState) => {
   console.log(!lampState.isOn);
 };
 
+// const clickSpaceHandler = () => {
+//   alert('Now you will be send to the SPACE!');
+// };      why is it not working???
+
 return (
     <div>
       <Lamp 
@@ -42,6 +46,18 @@ return (
         <ImageSlider slides={slides}/>
       </div>
         
+      <Image
+          width='700px'
+          height='500px'
+          // onClick={this.clickSpaceHandler}
+          title='Space'
+          style={{ border: '10px solid black' }}
+        >
+          <img
+            src='https://images.immediate.co.uk/production/volatile/sites/25/2020/04/Things-never-knew-astronomy-e454e5d.jpg?quality=90&webp=true&resize=1000,667'
+            alt='Space'
+          />
+        </Image>  
     </div>
 );
 }
