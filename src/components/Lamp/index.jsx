@@ -1,5 +1,6 @@
 import React from "react";
 import './style.css';
+import Switch from "../Switch";
 
 class Lamp extends React.Component {
     constructor(props) {
@@ -12,12 +13,15 @@ class Lamp extends React.Component {
     }
         clickHandler = () => {
             this.props.callback(this.state);
-            this.setState({isOn: !this.state.isOn})}
-      
+            this.setState({isOn: !this.state.isOn})};
 
+        handleToSwitch = () => {
+            this.setState({isOn: !this.state.isOn});
+        }    
     render(){
         const classNames = 'lamp'+ (this.state.isOn? ' lampOn': '');
         const text = (this.state.isOn? 'on' : 'off');
+        const handleToSwitch = this.handleToSwitch;
         
         return (
             <div> 
@@ -25,6 +29,7 @@ class Lamp extends React.Component {
                 {this.state.isOn}
             </div>
             <p>This lamp is {text}</p>
+            <Switch handleToSwitch = {handleToSwitch.bind(this)}/>
             </div>
             
         )

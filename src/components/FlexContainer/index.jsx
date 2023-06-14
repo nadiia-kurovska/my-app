@@ -4,9 +4,9 @@ function FlexContainer(props) {
     const {children} = props;
 
     return (
-        <p style={{ color: '#33e'}}>
+        <div style={{ color: '#33e'}}>
             <ul>{children}</ul>
-        </p>
+        </div>
     );
 }
 
