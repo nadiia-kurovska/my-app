@@ -24,6 +24,9 @@ const names = [
   {name: 'Britanny Paugh', id: '7'},
 ]
 
+const AlohaHandler = (alohaState) => {
+
+}
 
 const containerStyles = {
   width: '500px',
@@ -47,7 +50,7 @@ return (
         comment="it is a comment to lamp"      
       />
       
-      <Aloha names={names} text="i can do it"/>
+      <Aloha names={names} text="i can do it" greeting={AlohaHandler}/>
 
       <FlexContainer names={slides}>
         <li></li>

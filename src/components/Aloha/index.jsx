@@ -5,21 +5,31 @@ class Aloha extends React.Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            isHello: true,
         };
+      };  
+        
+        clickHandler = () => {
+            this.props.greeting(this.state);
+            this.setState({isHello: !this.state.isHello})
+        };
+  
 
-    render() {   
+    render() {  
+        const greetingText = (this.state.isHello? 'Hello' : 'Goodbye'); 
         const { names } = this.props;
         const alohaItems = names.map(person =>
         <li key={person.id}>
-            Hello, {person.name}
+            <span onClick={this.clickHandler}>{greetingText}</span>, {person.name}
         </li>
-    )
+        );
 
     return <div> 
          <ul>{alohaItems}</ul>
          </div>
 
-    }
+    };
 };
 
     //     sayBye = () => {
