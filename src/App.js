@@ -3,6 +3,7 @@ import ImageSlider from './components/ImageSlider';
 import Lamp from './components/Lamp';
 import FlexContainer from './components/FlexContainer';
 import Image from './components/Image';
+import Aloha from './components/Aloha';
 
 function App() {
   const slides = [
@@ -12,6 +13,17 @@ function App() {
     {url: 'https://hubblesite.org/files/live/sites/hubble/files/home/hubble-30th-anniversary/images/_images/hubble_30th_images/hubble-30th-carina-nebula.jpg?t=tn2400', title: 'Carina Nebula', description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'},
     {url: 'https://hubblesite.org/files/live/sites/hubble/files/home/hubble-30th-anniversary/images/_images/hubble_30th_images/hubble-30th-monkey-head.jpg?t=tn2400', title: 'Monkey Head Nebula', description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.'},
 ];
+
+const names = [
+  {name:'John Doe', id: '1'},
+  {name:'Will Smith', id: '2'},
+  {name:'Jack Wong', id: '3'},
+  {name: 'Kim Patisson', id: '4'},
+  {name:'Kelly Johnes', id: '5'},
+  {name: 'Anna Conner', id: '6'},
+  {name: 'Britanny Paugh', id: '7'},
+]
+
 
 const containerStyles = {
   width: '500px',
@@ -34,11 +46,14 @@ return (
         callback={LampHandler}
         comment="it is a comment to lamp"      
       />
+      
+      <Aloha names={names} text="i can do it"/>
+
       <FlexContainer names={slides}>
         <li></li>
         <li></li>
         <li>amracadabra</li>
-      </FlexContainer>
+      </FlexContainer> 
 
 
       <h1>NEBULAS</h1>
