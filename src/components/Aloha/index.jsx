@@ -9,7 +9,7 @@ class Aloha extends React.Component {
             isHello: true,
         };
       };  
-        
+
         clickHandler = () => {
             this.props.greeting(this.state);
             this.setState({isHello: !this.state.isHello})
@@ -23,10 +23,11 @@ class Aloha extends React.Component {
         <li key={person.id}>
             <span onClick={this.clickHandler}>{greetingText}</span>, {person.name}
         </li>
-        );
+        ); //how to make change in each element seprately?
 
     return <div> 
          <ul>{alohaItems}</ul>
+         <button >sort in alpabeticat order</button>
          </div>
 
     };
